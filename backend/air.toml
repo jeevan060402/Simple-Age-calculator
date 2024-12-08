@@ -1,0 +1,23 @@
+# Config file for Air (Go Auto-reloading)
+
+# Root directory of the project
+root = "."
+
+# Directory to exclude from watching
+exclude_dir = ["vendor", "tmp", "assets"]
+
+# Files to watch for changes
+include_ext = ["go", "tmpl", "html"]
+
+# Command to run
+build = "go build -o ./tmp/main ."
+cmd = "./tmp/main"
+
+# Log file (optional)
+log = "air.log"
+
+# Watching delay (in seconds)
+delay = 1000
+
+# Allow verbose output
+verbose = true
