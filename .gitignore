@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+
+# Build output
+/dist
+/build
+
+# Temporary files created by the editor
+*.log
+*.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Parcel and Webpack cache
+.cache/
+
+# Babel and Jest files
+*.babelrc
+*.jest*
+
+# dotenv env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS system files
+*.swp
+*~
+
+# Tern config file
+.tern-port
+
+# Optional for React apps with TypeScript
+*.tsbuildinfo
+
+# Create React App settings
+/react-scripts/
