@@ -1,0 +1,95 @@
+/* AgeCalculator.css */
+
+/* Animated background with dynamic gradient movement */
+@keyframes slideBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.animated-background {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: slideBackground 15s ease infinite; /* Slower animation for a more relaxed feel */
+  position: relative;
+  min-height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif; /* Clean font */
+}
+
+/* Age calculator container */
+.age-calculator-container {
+  background: rgba(255, 255, 255, 0.85); /* Slightly opaque white */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Soft, large shadow */
+  text-align: center;
+  width: 100%;
+  max-width: 450px; /* Maximum width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Increased padding and rounded corners for a more refined look */
+}
+
+/* Hover effect for container */
+.age-calculator-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Heading style */
+.age-calculator-container h3 {
+  font-size: 2.25rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Making the heading more bold and impactful */
+}
+
+/* Styling for the input fields */
+.MuiTextField-root {
+  margin-bottom: 20px;
+}
+
+.MuiTextField-root input {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+/* Button Styling */
+.MuiButton-root {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color: #4caf50;
+  transition: all 0.2s ease;
+}
+
+.MuiButton-root:hover {
+  background-color: #45a049;
+}
+
+/* Error message styling */
+.MuiTypography-colorError {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #f44336;
+}
+
+/* Age output styling */
+.MuiTypography-h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+}

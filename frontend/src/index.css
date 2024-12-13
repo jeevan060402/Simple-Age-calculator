@@ -1,11 +1,4 @@
 body {
-    background-image: url('./assets/background.jpg'); /* Path to background image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif; /* Material-UI default font */
-  }
-  
+  background-color: #f0f0f0; /* Light gray for visibility */
+  color: #000; /* Ensure text is black */
+}

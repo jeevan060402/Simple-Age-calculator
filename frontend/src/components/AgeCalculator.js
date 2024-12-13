@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Grid, Typography, Box } from '@mui/material';
 import axios from 'axios';
-import backgroundImage from '../assets/background.jpg';  // Import background image
+import './AgeCalculator.css'; // Import the updated CSS file for animations
 
 function AgeCalculator() {
   const [dob, setDob] = useState('');
@@ -27,48 +27,40 @@ function AgeCalculator() {
   };
 
   return (
-    <Box
-      sx={{
-        maxWidth: 500,
-        margin: '0 auto',
-        padding: 3,
-        backgroundImage: `url(${backgroundImage})`,  // Use the imported image
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        borderRadius: '8px',
-        boxShadow: 3,
-      }}
-    >
-      <Typography variant="h1" align="center" gutterBottom>
-        Calculate Your Age
-      </Typography>
-      <form onSubmit={handleSubmit}>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Date of Birth"
-              type="date"
-              value={dob}
-              onChange={(e) => setDob(e.target.value)}
-              InputLabelProps={{ shrink: true }}
-              variant="outlined"
-            />
+    <div className="animated-background">
+      <Box className="age-calculator-container">
+        <Typography variant="h3" gutterBottom>
+          Age Calculator
+        </Typography>
+        <form onSubmit={handleSubmit}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                label="Date of Birth"
+                type="date"
+                value={dob}
+                onChange={(e) => setDob(e.target.value)}
+                InputLabelProps={{ shrink: true }}
+                variant="outlined"
+                required
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Button type="submit" variant="contained" color="primary" fullWidth>
+                Calculate Age
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="primary" fullWidth>
-              Calculate
-            </Button>
-          </Grid>
-        </Grid>
-      </form>
-      {error && <Typography color="error" align="center">{error}</Typography>}
-      {age && (
-        <Box sx={{ marginTop: 3, textAlign: 'center' }}>
-          <Typography variant="h6">Your Age is: {age}</Typography>
-        </Box>
-      )}
-    </Box>
+        </form>
+        {error && <Typography color="error" sx={{ mt: 2 }}>{error}</Typography>}
+        {age && (
+          <Box sx={{ marginTop: 3 }}>
+            <Typography variant="h5">You are {age} years old</Typography>
+          </Box>
+        )}
+      </Box>
+    </div>
   );
 }
 
