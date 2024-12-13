@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
@@ -42,6 +43,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env), // Define process.env
+    }),
     isDevelopment && new ReactRefreshWebpackPlugin(), // Add React Refresh plugin
   ].filter(Boolean), // Filter out false values (only include in development mode)
   devServer: {
