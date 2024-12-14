@@ -46,3 +46,5 @@ yarn-error.log*
 
 # Create React App settings
 /react-scripts/
+backend/*.db
+backend/tmp/*
